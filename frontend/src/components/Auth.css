@@ -1,30 +1,32 @@
-/* Background setup */
+/* Background and Centering */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background: url('./background.jpg') no-repeat center center fixed;
+    background: url('') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  /* Auth container */
+  /* Container for Login / Signup */
   .auth-container {
-    position: relative;
     background: rgba(0, 0, 0, 0.85);
+    padding: 40px 30px; /* Added padding for breathing space */
     border-radius: 12px;
     width: 90%;
     max-width: 400px;
-    padding: 40px 30px;
-    margin: 80px auto;
-    box-shadow: 0 0 2px rgba(255, 223, 0, 0.5);
-    color: #fff;
     text-align: center;
-    /* animation: glow 2s infinite alternate; */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.5);
+    animation: glow 2s infinite alternate, fadeIn 0.5s ease-out;
+    box-sizing: border-box; /* IMPORTANT: So padding doesn't overflow */
   }
   
-  /* Glow animation */
+  /* Glow Animation for Container */
   @keyframes glow {
     0% {
       box-shadow: 0 0 10px rgba(255, 223, 0, 0.4), 0 0 20px rgba(255, 223, 0, 0.2);
@@ -38,34 +40,33 @@ body, html {
   .auth-container h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #FFC300; /* Yellow */
+    color: #FFC300;
   }
   
-  /* Form */
-  .auth-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* Inputs */
+  /* Input Fields */
   .auth-container input {
+    width: 100%;
     padding: 12px;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    outline: none;
     background: rgba(255, 255, 255, 0.9);
+    outline: none;
+    box-sizing: border-box;
   }
   
-  /* Button */
+  /* Buttons */
   .auth-container button {
+    width: 100%;
     background: #333;
     color: #fff;
     border: none;
     padding: 12px;
+    margin-top: 10px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
   }
@@ -75,27 +76,22 @@ body, html {
     color: #000;
   }
   
-  /* Sign Up / Sign In Link */
+  /* Switch Link between Login/Signup */
   .auth-container p {
     margin-top: 15px;
-    font-size: 0.95rem;
-    color: #FFC300;
+    font-size: 0.9rem;
+    color: #fff;
     cursor: pointer;
-    text-decoration: underline;
   }
   
   .auth-container p:hover {
-    color: #FFD700;
+    text-decoration: underline;
+    color: #FFC300;
   }
   
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    .auth-container {
-      width: 95%;
-      padding: 30px 20px;
-    }
-    .auth-container h2 {
-      font-size: 1.7rem;
-    }
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   
