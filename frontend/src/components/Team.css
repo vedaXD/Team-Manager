@@ -1,0 +1,169 @@
+/* Background setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Team page container */
+  .team-container {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 30px;
+    margin: 40px auto;
+    color: #fff;
+    text-align: center;
+    /* box-shadow: 0 0 20px rgba(255, 223, 0, 0.5); */
+    /* animation: glow 2s infinite alternate; */
+  }
+  
+  /* Glow animation */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 223, 0, 0.4), 0 0 20px rgba(255, 223, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 25px rgba(255, 223, 0, 0.7), 0 0 40px rgba(255, 223, 0, 0.4);
+    }
+  }
+  
+  /* Heading */
+  .team-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFC300;
+  }
+  
+  /* Player form */
+  .player-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Player inputs */
+  .player-input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background: #FFC300;
+    color: #000;
+  }
+  
+  /* Players list */
+  .players-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Single player card */
+  .player-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .player-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Player details */
+  .player-item h3 {
+    margin-bottom: 8px;
+    color: #FFC300;
+  }
+  
+  .player-item p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+  
+  /* Button group inside player card */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Edit and Delete buttons */
+  .edit-btn, .delete-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    background: #FFC300;
+    color: #000;
+  }
+  
+  /* Logout button */
+  .logout-btn {
+    margin-top: 30px;
+    background: #FFC300;
+    color: #080808;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background: #FF5733;
+    color: #000;
+  }
+  
+  /* Responsive for mobile screens */
+  @media (max-width: 768px) {
+    .team-container {
+      padding: 30px 20px;
+    }
+  
+    .players-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .player-item {
+      width: 90%;
+    }
+  }
+  
